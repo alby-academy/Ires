@@ -1,10 +1,21 @@
 ﻿namespace Sample;
 
-public class Sender : ISender
+public class Sender
 {
-    public void Send()
+    public bool Send(string suffix)
     {
-        var address = ISender.GetAddresses();
-        Console.WriteLine(string.Join(", ", address));
+        try
+        {
+            var address = new[] { "add1", "add2", "add3" }
+                .Select(c => $"{suffix} {c}");
+            
+            Console.WriteLine(string.Join(", ", address));
+        }
+        catch
+        {
+            return false;
+        }
+
+        return true;
     }
 }
