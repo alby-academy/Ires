@@ -9,5 +9,5 @@ public class Runner
         _sender = sender;
     }
 
-    public void Run() => _sender("Alby");
+    public void Run() => _sender("Stefano Casagrande");
 }
