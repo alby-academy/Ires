@@ -4,8 +4,7 @@ using Sample;
 
 Console.WriteLine("Hello, World!");
 
-var gateway = new AddressGateway();
-var sender = new Sender(gateway);
+var sender = new Sender();
 
 sender.Send();
 

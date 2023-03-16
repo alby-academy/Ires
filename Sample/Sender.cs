@@ -1,16 +1,10 @@
 ﻿namespace Sample;
 
-public class Sender : SenderBase
+public class Sender : ISender
 {
-    public string Name { get; set; }
-
-    public Sender(AddressGateway gateway) : base(gateway)
+    public void Send()
     {
-    }
-
-    public override void Send()
-    {
-        var address = GetAddresses();
+        var address = ISender.GetAddresses();
         Console.WriteLine(string.Join(", ", address));
     }
 }
